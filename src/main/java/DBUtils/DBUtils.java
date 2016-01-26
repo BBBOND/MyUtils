@@ -132,7 +132,7 @@ public class DBUtils {
                 String cols_name = metaData.getCatalogName(i);
                 Object cols_value = resultSet.getObject(cols_name);
                 if (cols_value == null) {
-                    cols_name = "";
+                    cols_value = "";
                 }
                 map.put(cols_name, cols_value);
             }
@@ -172,7 +172,7 @@ public class DBUtils {
                 String cols_name = metaData.getCatalogName(i);
                 Object cols_value = resultSet.getObject(cols_name);
                 if (cols_value == null) {
-                    cols_name = "";
+                    cols_value = "";
                 }
                 Field field = cls.getDeclaredField(cols_name);
                 field.setAccessible(true);
@@ -210,7 +210,7 @@ public class DBUtils {
                 String cols_name = metaData.getCatalogName(i);
                 Object cols_value = resultSet.getObject(cols_name);
                 if (cols_value == null) {
-                    cols_name = "";
+                    cols_value = "";
                 }
                 Field field = cls.getDeclaredField(cols_name);
                 field.setAccessible(true);
